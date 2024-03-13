@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 600px 600px;
+    padding-left: 210px;
+    width: 1500px;
+    height:1500px;
+}
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

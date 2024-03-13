@@ -1,0 +1,24 @@
+<div class="container" *ngIf="product">
+      <div>
+        <div id="delete">
+          <button id="btd" (click)="deleteProduct()">X</button>
+        </div>
+        <div class="images">
+          <img src="{{product.image.at(product.i)}}">
+        </div>
+      </div>
+      <h3>
+          <a href="{{product.reference}}" target="_blank" [title]="product.name + ' details'">
+              {{ product.name }}
+          </a>
+      </h3>
+      <div class="rating">
+          <div id="lik" (click)="like()">
+              <img id="like" *ngIf="!isLike" src="../../assets/images/icone-noire-noir.png" >
+              <img id="like" *ngIf="isLike" src="../../assets/images/pngimg.com - like_PNG68.png">
+              <span id="cnt"><strong>{{ product.like }}</strong></span>
+          </div>
+      </div>
+  
+      
+</div>
