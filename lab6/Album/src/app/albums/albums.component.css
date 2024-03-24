@@ -5,8 +5,20 @@
     text-align: center;
     margin-bottom: 15px;
     cursor: pointer;
+    margin: 20px;
 }
 .wrapper {
-    display: grid;
+    margin-top: 180px;
+    /* display: grid;
     grid-template-columns: 300px 300px 300px 300px 300px 300px;
+    text-align: center; */
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.create {
+    width: 100%;
+    margin-left: 100px;
 }

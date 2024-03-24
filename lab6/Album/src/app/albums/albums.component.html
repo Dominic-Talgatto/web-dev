@@ -1,9 +1,14 @@
 
 <div class="wrapper">
-    <div class="cont" *ngFor="let item of albums" [routerLink]="['/albums', item.id]">
+    <div class="create">
+        <input type="text" [(ngModel)]="newPost.title">
+        <button class="btn-create" (click)="addPost()">create</button>
+
+    </div>
+    <div class="cont" *ngFor="let item of Posts" [routerLink]="['/albums', item.id]">
         <h2>Id: {{item.id}}</h2>
         <h3>User Id: {{item.userId}}</h3>
         <p>Title: {{item.title}}</p>
-        <button>Delete</button>
+        <button (click)="deletePost(item.id)">Delete</button>
     </div>
 </div>

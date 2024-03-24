@@ -12,15 +12,15 @@ export class PostService{
   constructor(private http: HttpClient) {
   }
   getPosts(): Observable<Album[]>{
-    return this.http.get<Album[]>(`${this.BASE_URL}/posts`);
+    return this.http.get<Album[]>(`${this.BASE_URL}/albums`);
   }
   createPost(newPost: Album): Observable<Album> {
-    return this.http.post<Album>(`${this.BASE_URL}/posts`, newPost);
+    return this.http.post<Album>(`${this.BASE_URL}/albums`, newPost);
   }
   getPost(id: number): Observable<Album> {
-    return this.http.get<Album>(`${this.BASE_URL}/posts/${id}`);
+    return this.http.get<Album>(`${this.BASE_URL}/albums/${id}`);
   }
   deletePost(id: number) {
-    return this.http.delete(`${this.BASE_URL}/posts/${id}`);
+    return this.http.delete(`${this.BASE_URL}/albums/${id}`);
   }
 }

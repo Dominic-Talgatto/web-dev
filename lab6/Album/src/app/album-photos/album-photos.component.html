@@ -1,1 +1,6 @@
-<p>album-photos works!</p>
+<div class="container">
+    <div class="item" *ngFor="let p of photos" style="background-image: url({{p.url}});"></div>
+    <div class="return" routerLink="/albums/{{Ialbum.id}}">
+        <img src="../assets/images/return.webp" alt="">
+    </div>
+</div>

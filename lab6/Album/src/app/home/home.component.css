@@ -51,7 +51,9 @@ body {
     font-size: 18px;
     margin-top: -30px;
 }
-
+.text button:hover {
+    cursor: pointer;
+}
 
 img{
     width: 100%;

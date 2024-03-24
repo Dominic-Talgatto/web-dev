@@ -1,1 +1,22 @@
-<p>{{Ialbum.id}}</p>
+<div class="flex">
+<div class="container">
+    <div class="function">
+        <div class="return" [routerLink]="['/albums']">
+            <img src="../assets/images/return.webp" alt="">
+        </div>
+        <div class="change" (click)="isInput()">
+            <img src="../assets/images/change.webp" alt="">
+        </div>
+        <div class="photos">
+            <img src="../assets/images/photos.png" alt="" routerLink="/albums/{{Ialbum.id}}/photos">
+        </div>
+    </div>
+    <p class="id">№{{Ialbum.id}}</p>
+    <p class="title">{{Ialbum.title}}</p>
+
+    <div class="change" *ngIf="isChange">
+        <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Enter new title">
+        <img class="img" src="../assets/images/bg.jpg" (click)="saveTitle()">
+    </div>
+</div>
+</div>
