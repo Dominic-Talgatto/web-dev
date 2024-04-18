@@ -12,7 +12,7 @@ categories = models.Category.objects.all()
 def product_list(request):
     products_json = [product.to_json() for product in products]
     return JsonResponse(products_json, safe=False)
-
+    
 
 def product_detail(request, product_id):
     try:
@@ -35,4 +35,9 @@ def category_detail(request, category_id):
         return JsonResponse({'message': str(e)}, status=400)
 
     return JsonResponse(category.to_json())
-# Create your views here.
+
+
+def products_by_category(request, category_id):
+    products = models.Product.objects.all()
+    products_json = [p.to_json() for p in products if p.category.id == category_id]
+    return JsonResponse(products_json, safe=False)
